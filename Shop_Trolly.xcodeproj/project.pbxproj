@@ -13,6 +13,8 @@
 		7E013DE72B5E99AF0026053A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E013DE62B5E99AF0026053A /* Preview Assets.xcassets */; };
 		7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DE82B5E99AF0026053A /* Persistence.swift */; };
 		7E013DEC2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DEA2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld */; };
+		7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DF82B5E9C0C0026053A /* LoginView.swift */; };
+		7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFA2B5EAF1B0026053A /* CustomTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		7E013DE62B5E99AF0026053A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E013DE82B5E99AF0026053A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7E013DEB2B5E99AF0026053A /* Shop_Trolly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shop_Trolly.xcdatamodel; sourceTree = "<group>"; };
+		7E013DF82B5E9C0C0026053A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7E013DFA2B5EAF1B0026053A /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,11 @@
 		7E013DDE2B5E99AD0026053A /* Shop_Trolly */ = {
 			isa = PBXGroup;
 			children = (
+				7E013DF62B5E9B9C0026053A /* Helpers */,
+				7E013DF52B5E9B6E0026053A /* ApiServices */,
+				7E013DF42B5E9B5F0026053A /* ViewModels */,
+				7E013DF32B5E9B550026053A /* Views */,
+				7E013DF22B5E9B100026053A /* Models */,
 				7E013DDF2B5E99AD0026053A /* Shop_TrollyApp.swift */,
 				7E013DE12B5E99AD0026053A /* ContentView.swift */,
 				7E013DE32B5E99AF0026053A /* Assets.xcassets */,
@@ -71,6 +80,51 @@
 				7E013DE62B5E99AF0026053A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E013DF22B5E9B100026053A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E013DF32B5E9B550026053A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E013DF72B5E9BCA0026053A /* Auth */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E013DF42B5E9B5F0026053A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7E013DF52B5E9B6E0026053A /* ApiServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		7E013DF62B5E9B9C0026053A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E013DFA2B5EAF1B0026053A /* CustomTF.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E013DF72B5E9BCA0026053A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7E013DF82B5E9C0C0026053A /* LoginView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +199,9 @@
 			files = (
 				7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */,
 				7E013DE22B5E99AD0026053A /* ContentView.swift in Sources */,
+				7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */,
 				7E013DE02B5E99AD0026053A /* Shop_TrollyApp.swift in Sources */,
+				7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */,
 				7E013DEC2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
