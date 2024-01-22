@@ -15,6 +15,7 @@
 		7E013DEC2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DEA2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld */; };
 		7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DF82B5E9C0C0026053A /* LoginView.swift */; };
 		7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFA2B5EAF1B0026053A /* CustomTF.swift */; };
+		7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFC2B5EFADB0026053A /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7E013DEB2B5E99AF0026053A /* Shop_Trolly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shop_Trolly.xcdatamodel; sourceTree = "<group>"; };
 		7E013DF82B5E9C0C0026053A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7E013DFA2B5EAF1B0026053A /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
+		7E013DFC2B5EFADB0026053A /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7E013DF82B5E9C0C0026053A /* LoginView.swift */,
+				7E013DFC2B5EFADB0026053A /* SignupView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */,
 				7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */,
 				7E013DE22B5E99AD0026053A /* ContentView.swift in Sources */,
 				7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */,
