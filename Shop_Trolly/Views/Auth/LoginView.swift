@@ -3,6 +3,7 @@ import SwiftUI
 struct LoginView: View {
     @Binding var email: String
     @Binding var password: String
+    @State private var showForgetPwdView: Bool = false
     @State private var isOn = false
     var body: some View {
         VStack{
@@ -69,7 +70,7 @@ struct LoginView: View {
                 Spacer()
                 Button("Forgot Password?") {
                     // Forgot password action
-                    
+                    showForgetPwdView.toggle()
                 }
             }
             .padding(.horizontal, 40)
@@ -97,30 +98,36 @@ struct LoginView: View {
             .padding(.bottom,50)
             
         }
+        .sheet(isPresented: $showForgetPwdView, content: {
+            ForgetPwdView(email: .constant(""))
+                .presentationDetents([.height(400)])
+                .presentationCornerRadius(30)
+        })
     }
-    struct iOSCheckboxToggleStyle: ToggleStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            // 1
-            Button(action: {
+      
 
-                // 2
-                configuration.isOn.toggle()
-
-            }, label: {
-                HStack {
-                    // 3
-                    Image(systemName: configuration.isOn ? "checkmark.square" : "square")
-                        .foregroundColor(Color(hex: "#152354"))
-
-                    configuration.label
-                    Spacer()
-                }.padding(.horizontal, 40)
-            })
-        }
-    }
 }
 
+struct iOSCheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        // 1
+        Button(action: {
 
+            // 2
+            configuration.isOn.toggle()
+
+        }, label: {
+            HStack {
+                // 3
+                Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                    .foregroundColor(Color(hex: "#152354"))
+
+                configuration.label
+                Spacer()
+            }.padding(.horizontal, 40)
+        })
+    }
+}
 
 // Preview code
 struct LoginView_Previews: PreviewProvider {

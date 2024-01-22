@@ -16,6 +16,7 @@
 		7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DF82B5E9C0C0026053A /* LoginView.swift */; };
 		7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFA2B5EAF1B0026053A /* CustomTF.swift */; };
 		7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFC2B5EFADB0026053A /* SignupView.swift */; };
+		7E013DFF2B5F083D0026053A /* ForgetPwdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013DFE2B5F083D0026053A /* ForgetPwdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7E013DF82B5E9C0C0026053A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7E013DFA2B5EAF1B0026053A /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		7E013DFC2B5EFADB0026053A /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		7E013DFE2B5F083D0026053A /* ForgetPwdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				7E013DF82B5E9C0C0026053A /* LoginView.swift */,
 				7E013DFC2B5EFADB0026053A /* SignupView.swift */,
+				7E013DFE2B5F083D0026053A /* ForgetPwdView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */,
 				7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */,
 				7E013DE22B5E99AD0026053A /* ContentView.swift in Sources */,
+				7E013DFF2B5F083D0026053A /* ForgetPwdView.swift in Sources */,
 				7E013DFB2B5EAF1B0026053A /* CustomTF.swift in Sources */,
 				7E013DE02B5E99AD0026053A /* Shop_TrollyApp.swift in Sources */,
 				7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */,
