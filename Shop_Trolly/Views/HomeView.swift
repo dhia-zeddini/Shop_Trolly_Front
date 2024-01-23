@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    static var cards = [
+             "Italy",
+            "England",
+            "ddd",
+            "Englffffand",
+            "Englh(yhyand",
+            "England",
+            "England",
+          
+           
+        ]
+
     var body: some View {
         VStack{
             HStack {
@@ -128,14 +140,13 @@ struct HomeView: View {
             
             
             ScrollView (showsIndicators: false){
-                   //  LazyVGrid(columns: [GridItem(), GridItem()]) {
-                         ForEach(0..<20) { index in
-                             // Your table cell content goes here
-                             TableCell(index: index)
-                                 .frame(height: 50) // Adjust the height as needed
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                    ForEach(HomeView.cards, id: \.self) { card in
+                        ProductCard().padding(.top,70)
+                                     
+                             }
                          }
-                    // }
-                     //.padding()
+                         .padding()
                  }
         }
     }
