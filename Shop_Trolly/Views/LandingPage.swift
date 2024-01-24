@@ -30,7 +30,7 @@ struct LandingPage: View {
                }
                Spacer()
                BottomBar(selectedTab: $selectedTab)
-                   .background(Color(hex: "#152354"))
+                   .background(Color.themePrimary)
            }
            
            

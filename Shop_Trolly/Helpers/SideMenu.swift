@@ -13,140 +13,116 @@ struct SideMenu: View {
     @Binding var isVisible: Bool
     @Environment(\.dismiss) private var dismiss
     var body: some View {
-        VStack{
-            HStack {
-                Button(action: { isVisible = false }) {
-                                        Image(systemName: "chevron.left")
-                                            .font(.title2)
-                                    }
-                       .padding(.leading, 16)
-                       .foregroundColor(.black)
-                Spacer()
-                Text("MENU")
-                    .foregroundColor(Color(hex: "#152354"))
-                .bold()
-                .font(.title2)
-                Spacer()
-               
-            }
-            .padding(.top,20)
-            
-            
-            VStack{
-                HStack{
-                    Image(systemName: "person")
-                        .resizable()
-                        //.scaledToFit()
-                        .background(Color(hex: "#F7F8F9"))
-                        .cornerRadius(80)
-                        .frame(width: 80,height: 80)
-                    VStack{
-                        Text("User Name")
-                            .font(.title3)
-                            .bold()
-                            .foregroundColor(Color(hex: "#152354"))
-                        Button("Edit Profile") {
-                            // Forgot password action
-                            
-                        }.foregroundColor(.secondary)
+        GeometryReader { geometry in
+            VStack(spacing: 20){
+                HStack {
+                    Button(action: {
+                        withAnimation{
+                            isVisible.toggle()
+                        }
+                        
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
                     }
+                    .padding(.leading, 16)
+                    .foregroundColor(.black)
                     Spacer()
+                    Text("MENU")
+                        .foregroundColor(Color(hex: "#152354"))
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                    
                 }
-                HStack{
-                    Text("All Categories")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,20)
-                HStack{
-                    Text("Track Order")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Discover All")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Location")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Payment Cards")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Orders")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Scan")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Text("Settings")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
+                .padding(.top,20)
                 
-                HStack{
-                    Text("Track Order")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,10)
-                HStack{
-                    Image(systemName: "arrowshape.turn.up.right.fill")
-                        .foregroundColor(.red)
-                    Text("Logout")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color(hex: "#152354"))
-                    Spacer()
-                }.padding(.top,30)
-                    .padding(.bottom,50)
-            }.padding(.top,20)
-           
+                userProfile
+                menuItems
+                
+                
+            }
+            .padding(.horizontal,40)
+            .frame(maxWidth: geometry.size.width / 1.3, maxHeight: .infinity, alignment: .leading)
+            .background(Color.white)
+            .offset(x: isVisible ? 0 : -UIScreen.main.bounds.width)
+            .animation(.easeInOut, value: isVisible)
             
         }
-        .padding(.horizontal, 40)
-        .background(.white)
-       // .frame(width: 100)
-        //.padding(.top, 20)
-        .interactiveDismissDisabled()
-        .gesture(
-                    DragGesture()
-                        .onChanged { value in
-                            if value.translation.width > 0 {
-                                isVisible = false
-                            }
-                        }
-                )
-        
     }
-}
 
+private var userProfile: some View {
+        HStack {
+            Image(systemName: "person")
+                .resizable()
+                .frame(width: 80, height: 80)
+                .background(Color.themePrimary.opacity(0.1))
+                .cornerRadius(40)
+            VStack(alignment: .leading) {
+                Text("User Name")
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.themePrimary)
+                Button("Edit Profile") {
+                    // Edit profile action
+                }
+                .foregroundColor(.secondary)
+            }
+            Spacer()
+        }
+        .padding(.vertical, 40)
+    }
+
+    private var menuItems: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            ForEach(menuOptions, id: \.self) { option in
+                HStack {
+                    Button(action: {
+                        print(option)
+                        
+                    }) {
+                        Text(option)
+                            .font(.title3)
+                            .bold()
+                        .foregroundColor(.themePrimary)
+                    }
+                    
+                    Spacer()
+                }
+            }
+            logoutButton
+        }
+    }
+
+    private var logoutButton: some View {
+        Button(action: {
+            // Logout action
+        }) {
+            HStack {
+                Image(systemName: "arrowshape.turn.up.right.fill")
+                    .foregroundColor(.red)
+                Text("Logout")
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.themePrimary)
+            }
+            .padding(.vertical, 30)
+        }
+    }
+
+    // Consider using a model or array for menu options
+    private let menuOptions = [
+        "All Categories",
+        "Track Order",
+        "Discover All",
+        "Location",
+        "Payment Cards",
+        "Orders",
+        "Scan",
+        "Settings",
+        "Track Order"
+    ]
+}
 #Preview {
-    HomeView()
+    LandingPage()
 }

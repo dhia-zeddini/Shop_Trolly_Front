@@ -16,7 +16,7 @@ struct ForgetPwdView: View {
             HStack {
                 Spacer()
                 Text("FORGET PASSWORD")
-                    .foregroundColor(Color(hex: "#152354"))
+                    .foregroundColor(Color.themePrimary)
                 .bold()
                 Spacer()
                 Button(action: { dismiss() }) {
@@ -67,7 +67,7 @@ struct ForgetPwdView: View {
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color(hex: "#FD6969"))
+            .background(Color.themeSecondary)
             .padding(.horizontal, 40)
             .padding(.top,20)
             .padding(.bottom,50)

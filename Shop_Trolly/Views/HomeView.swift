@@ -36,7 +36,7 @@ struct HomeView: View {
                 Spacer()
                 Text("HOME      ")
                     .font(.title3)
-                    .foregroundColor(Color(hex: "#152354"))
+                    .foregroundColor(Color.themePrimary)
                 .bold()
                 Spacer()
                 
@@ -48,7 +48,7 @@ struct HomeView: View {
                 VStack{
                     HStack {
                         Text("Enjoy New Nike")
-                            .foregroundColor(Color(hex: "#152354"))
+                            .foregroundColor(Color.themePrimary)
                             .font(.title)
                         // .bold()
                         Spacer()
@@ -57,7 +57,7 @@ struct HomeView: View {
                     //.padding(.top, 40)
                     HStack {
                         Text("Products")
-                            .foregroundColor(Color(hex: "#152354"))
+                            .foregroundColor(Color.themePrimary)
                             .font(.title)
                             .bold()
                         Spacer()
@@ -81,7 +81,7 @@ struct HomeView: View {
                     }
             
                     .padding()
-                    .background(Color(hex: "#FD6969"))
+                    .background(Color.themeSecondary)
                     .cornerRadius(5)
                 }
                 .background(Color.white)
@@ -100,12 +100,12 @@ struct HomeView: View {
                             // Action to perform when the button is tapped
                         }) {
                             Text("All")
-                                .foregroundColor(Color(hex: "#152354"))
+                                .foregroundColor(Color.themePrimary)
                       
                         }
                         
                         .padding()
-                        .background(Color(hex: "#F7F8F9"))
+                        .background(Color.themeGray)
                         .cornerRadius(50)
                     }
                     ZStack {
@@ -121,7 +121,7 @@ struct HomeView: View {
                         }
                 
                         .padding()
-                        .background(Color(hex: "#FD6969"))
+                        .background(Color.themeSecondary)
                         .cornerRadius(5)
                     }
                     ZStack {
@@ -132,12 +132,12 @@ struct HomeView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 30, height: 30)
-                                .foregroundColor(Color(hex: "#152354"))
+                                .foregroundColor(Color.themePrimary)
                       
                         }
                 
                         .padding()
-                        .background(Color(hex: "#F7F8F9"))
+                        .background(Color.themeGray)
                         .cornerRadius(50)
                     }
                 }
@@ -156,27 +156,11 @@ struct HomeView: View {
         }
         .overlay(
             SideMenu(isVisible: $isSideMenuVisible)
-                .frame(width: 300)
-                .offset(x: isSideMenuVisible ? 0 : -400)
-                
         )
     }
 
 }
-struct TableCell: View {
-    var index: Int
 
-    var body: some View {
-        HStack {
-            Text("Column 1 - Row \(index)")
-                .padding(.top,10)
-                .border(Color.gray, width: 1)
-            Text("Column 2 - Row \(index)")
-                .padding(.top,10)
-                .border(Color.gray, width: 1)
-        }
-    }
-}
 #Preview {
     LandingPage()
 }
