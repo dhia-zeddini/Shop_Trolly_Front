@@ -24,6 +24,7 @@
 		7E013E092B5F13A30026053A /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013E082B5F13A20026053A /* BottomBar.swift */; };
 		7E013E0B2B5F143F0026053A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013E0A2B5F143F0026053A /* Constants.swift */; };
 		7E013E0D2B6019CB0026053A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013E0C2B6019CB0026053A /* ProductCard.swift */; };
+		7E013E0F2B604BA60026053A /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E013E0E2B604BA60026053A /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		7E013E082B5F13A20026053A /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		7E013E0A2B5F143F0026053A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7E013E0C2B6019CB0026053A /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		7E013E0E2B604BA60026053A /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				7E013E082B5F13A20026053A /* BottomBar.swift */,
 				7E013E0A2B5F143F0026053A /* Constants.swift */,
 				7E013E0C2B6019CB0026053A /* ProductCard.swift */,
+				7E013E0E2B604BA60026053A /* SideMenu.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */,
 				7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */,
 				7E013DE22B5E99AD0026053A /* ContentView.swift in Sources */,
+				7E013E0F2B604BA60026053A /* SideMenu.swift in Sources */,
 				7E013E032B5F103F0026053A /* HomeView.swift in Sources */,
 				7E013E072B5F11890026053A /* ChatView.swift in Sources */,
 				7E013DFF2B5F083D0026053A /* ForgetPwdView.swift in Sources */,

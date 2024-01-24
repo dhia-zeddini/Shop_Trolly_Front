@@ -14,23 +14,28 @@ struct HomeView: View {
             "ddd",
             "Englffffand",
             "Englh(yhyand",
-            "England",
-            "England",
+      
           
            
         ]
-
+    @State private var showSideMenu: Bool = false
+    @State private var isSideMenuVisible: Bool = false
     var body: some View {
         VStack{
             HStack {
-                Button(action: { }) {
+                Button(action: { 
+                    withAnimation {
+                        isSideMenuVisible.toggle()
+                    }
+                }) {
                         Image(systemName: "ellipsis.circle")
                             .font(.title2)
                          }
-                       .padding(.leading, 16)
+                       //.padding(.leading, 16)
                        .foregroundColor(.black)
                 Spacer()
-                Text("FORGET PASSWORD")
+                Text("HOME      ")
+                    .font(.title3)
                     .foregroundColor(Color(hex: "#152354"))
                 .bold()
                 Spacer()
@@ -149,6 +154,12 @@ struct HomeView: View {
                          .padding()
                  }
         }
+        .overlay(
+            SideMenu(isVisible: $isSideMenuVisible)
+                .frame(width: 300)
+                .offset(x: isSideMenuVisible ? 0 : -400)
+                
+        )
     }
 
 }
