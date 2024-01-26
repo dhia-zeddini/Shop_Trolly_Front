@@ -75,7 +75,7 @@ struct ForgetPwdView: View {
         }
         .frame(height: 600)
         //.padding(.top, 20)
-        .interactiveDismissDisabled()
+       // .interactiveDismissDisabled()
     }
   
 }

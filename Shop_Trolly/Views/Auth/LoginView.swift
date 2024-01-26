@@ -4,6 +4,7 @@ struct LoginView: View {
     @Binding var email: String
     @Binding var password: String
     @State private var showForgetPwdView: Bool = false
+    @State private var showLandingView: Bool = false
     @State private var isOn = false
     var body: some View {
         VStack{
@@ -83,6 +84,7 @@ struct LoginView: View {
             .padding(.top,20)
             Button(action: {
                 // Action to perform when the button is tapped
+                showLandingView=true
             }) {
                 Text("Log In")
                     .foregroundColor(.white)
@@ -96,6 +98,10 @@ struct LoginView: View {
             .padding(.horizontal, 40)
             .padding(.top,20)
             .padding(.bottom,50)
+            NavigationLink(destination: LandingPage(), isActive: $showLandingView) {
+                      EmptyView()
+                  }
+                  .isDetailLink(false)
             
         }
         .sheet(isPresented: $showForgetPwdView, content: {

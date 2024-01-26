@@ -20,6 +20,7 @@ struct HomeView: View {
         ]
     @State private var showSideMenu: Bool = false
     @State private var isSideMenuVisible: Bool = false
+    @State private var showDetailsView: Bool = false
     var body: some View {
         VStack{
             HStack {
@@ -144,15 +145,24 @@ struct HomeView: View {
             }.padding(.horizontal, 40)
             
             
-            ScrollView (showsIndicators: false){
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    ForEach(HomeView.cards, id: \.self) { card in
-                        ProductCard().padding(.top,70)
-                                     
-                             }
-                         }
-                         .padding()
+            ScrollView(showsIndicators: false) {
+                           LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                               ForEach(HomeView.cards, id: \.self) { card in
+                                   Button(action: {
+                                       showDetailsView = true
+                                   }) {
+                                       ProductCard() // Make sure ProductCard is a view that represents your product
+                                   }
+                                   .padding(.top, 70)
+                               }
+                           }
+                           .padding()
                  }
+        }
+        .sheet(isPresented: $showDetailsView) {
+            ProductDetailsView()
+                .presentationDetents([.fraction(0.9)])
+                .presentationCornerRadius(30)
         }
         .overlay(
             SideMenu(isVisible: $isSideMenuVisible)

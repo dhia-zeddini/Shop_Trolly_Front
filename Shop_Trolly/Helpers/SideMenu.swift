@@ -11,6 +11,7 @@ struct SideMenu: View {
    
     @State private var isOn = false
     @Binding var isVisible: Bool
+    @State private var showLoginView: Bool = false
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         GeometryReader { geometry in
@@ -101,15 +102,24 @@ private var userProfile: some View {
             HStack {
                 Image(systemName: "arrowshape.turn.up.right.fill")
                     .foregroundColor(.red)
-                Text("Logout")
-                    .font(.title3)
-                    .bold()
-                    .foregroundColor(.themePrimary)
+                Button(action: {
+                    showLoginView=true
+                    
+                }) {
+                    Text("Logout")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.themePrimary)
+                }
+                NavigationLink(destination: ContentView(), isActive: $showLoginView) {
+                          EmptyView()
+                      }
+                      .isDetailLink(false)
             }
             .padding(.vertical, 30)
         }
     }
-
+    
     // Consider using a model or array for menu options
     private let menuOptions = [
         "All Categories",
