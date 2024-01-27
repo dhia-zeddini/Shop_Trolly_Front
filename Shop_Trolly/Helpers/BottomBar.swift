@@ -51,12 +51,7 @@ struct BottomBar: View {
             }
         }
         .frame(height: 40)
-        .background(
-            Image("bottomBarBG")
-                .renderingMode(.template)
-                .foregroundColor(Color("PrimaryWhite"))
-        )
-        .shadow(color: Color("PrimaryBlack").opacity(colorScheme == .dark ? 0.5 : 0.1), radius: 10, x: 0, y: 0)
+       
     }
 }
 

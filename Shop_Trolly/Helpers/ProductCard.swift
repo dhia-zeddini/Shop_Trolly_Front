@@ -25,13 +25,20 @@ struct ProductCard: View {
             
             HStack{
                 VStack{
-                    Text("Air Zoom")
-                        .font(.title3)
-                        .fontWeight(.light)
-                    Text("$650     ")
-                        .font(.title2)
-                        .fontWeight(.bold)
+                    HStack {
+                        Text("Air Zoom")
+                            .font(.title3)
+                            .fontWeight(.light)
                         .foregroundColor(Color(hex: "#152354"))
+                        Spacer()
+                    }
+                    HStack {
+                        Text("$650")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        .foregroundColor(Color(hex: "#152354"))
+                        Spacer()
+                    }
                 }
                 Spacer()
             }

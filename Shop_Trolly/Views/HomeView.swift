@@ -18,9 +18,11 @@ struct HomeView: View {
           
            
         ]
+    let columnLayout = Array(repeating:GridItem() , count: 2)
     @State private var showSideMenu: Bool = false
     @State private var isSideMenuVisible: Bool = false
     @State private var showDetailsView: Bool = false
+    @State private var showCartView: Bool = false
     var body: some View {
         VStack{
             HStack {
@@ -35,11 +37,24 @@ struct HomeView: View {
                        //.padding(.leading, 16)
                        .foregroundColor(.black)
                 Spacer()
-                Text("HOME      ")
+                Text("HOME")
                     .font(.title3)
                     .foregroundColor(Color.themePrimary)
                 .bold()
                 Spacer()
+                
+                Button(action: {
+                    showCartView=true
+                }) {
+                    Image(systemName: "cart")
+                        .font(.title)
+                    }
+                .foregroundColor(Color.themePrimary)
+                NavigationLink(destination: CartView(), isActive: $showCartView) {
+                          EmptyView()
+                      }
+                //.isDetailLink(true)
+                      
                 
             }
             .padding(.top,20)
@@ -93,8 +108,8 @@ struct HomeView: View {
                 .padding(.bottom,30)
             }.padding(.top, 40)
             
-            ScrollView(.horizontal){
-                HStack(alignment: .center) {
+            ScrollView(.horizontal,showsIndicators: false){
+                HStack(alignment: .center,spacing: 20) {
               
                     ZStack {
                         Button(action: {
@@ -104,7 +119,7 @@ struct HomeView: View {
                                 .foregroundColor(Color.themePrimary)
                       
                         }
-                        
+                        .frame(width: 40, height: 40)
                         .padding()
                         .background(Color.themeGray)
                         .cornerRadius(50)
@@ -113,11 +128,13 @@ struct HomeView: View {
                         Button(action: {
                             // Action to perform when the button is tapped
                         }) {
-                            Image(systemName: "slider.horizontal.3")
+                            Image("nike-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 30, height: 30)
                                 .foregroundColor(.white)
+                            Text("Nike")
+                                .foregroundColor(.black)
                       
                         }
                 
@@ -129,10 +146,26 @@ struct HomeView: View {
                         Button(action: {
                             // Action to perform when the button is tapped
                         }) {
-                            Image(systemName: "slider.horizontal.3")
+                            Image("adidas-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(Color.themePrimary)
+                      
+                        }
+                
+                        .padding()
+                        .background(Color.themeGray)
+                        .cornerRadius(50)
+                    }
+                    ZStack {
+                        Button(action: {
+                            // Action to perform when the button is tapped
+                        }) {
+                            Image("under-armour-logo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(Color.themePrimary)
                       
                         }
@@ -146,12 +179,12 @@ struct HomeView: View {
             
             
             ScrollView(showsIndicators: false) {
-                           LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                           LazyVGrid(columns: columnLayout, spacing: 16) {
                                ForEach(HomeView.cards, id: \.self) { card in
                                    Button(action: {
                                        showDetailsView = true
                                    }) {
-                                       ProductCard() // Make sure ProductCard is a view that represents your product
+                                       ProductCard() 
                                    }
                                    .padding(.top, 70)
                                }
