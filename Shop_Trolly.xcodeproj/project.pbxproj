@@ -31,6 +31,7 @@
 		7E136E352B659CBA007B4704 /* CartProductSingleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E342B659CB9007B4704 /* CartProductSingleItem.swift */; };
 		7E136E372B6DA34E007B4704 /* ChatSingleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E362B6DA34E007B4704 /* ChatSingleItem.swift */; };
 		7E136E392B6DB244007B4704 /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E382B6DB244007B4704 /* ChatRoomView.swift */; };
+		7E136E3B2B6E7549007B4704 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E3A2B6E7549007B4704 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		7E136E342B659CB9007B4704 /* CartProductSingleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductSingleItem.swift; sourceTree = "<group>"; };
 		7E136E362B6DA34E007B4704 /* ChatSingleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSingleItem.swift; sourceTree = "<group>"; };
 		7E136E382B6DB244007B4704 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		7E136E3A2B6E7549007B4704 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				7E013E192B631CCE0026053A /* ProductDetailsView.swift */,
 				7E136E322B658400007B4704 /* CartView.swift */,
 				7E136E382B6DB244007B4704 /* ChatRoomView.swift */,
+				7E136E3A2B6E7549007B4704 /* CheckoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				7E136E352B659CBA007B4704 /* CartProductSingleItem.swift in Sources */,
 				7E013E0D2B6019CB0026053A /* ProductCard.swift in Sources */,
 				7E013DF92B5E9C0C0026053A /* LoginView.swift in Sources */,
+				7E136E3B2B6E7549007B4704 /* CheckoutView.swift in Sources */,
 				7E013DEC2B5E99AF0026053A /* Shop_Trolly.xcdatamodeld in Sources */,
 				7E013E092B5F13A30026053A /* BottomBar.swift in Sources */,
 				7E013E0B2B5F143F0026053A /* Constants.swift in Sources */,
