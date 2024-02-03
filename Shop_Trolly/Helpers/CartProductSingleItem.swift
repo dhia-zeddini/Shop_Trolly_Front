@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CartProductSingleItem: View {
-    @State private var quantity: Int=1
+    @State  var quantity: Int=1
     var body: some View {
           HStack {
               Image("jordan") // Replace with actual images
@@ -31,13 +31,14 @@ struct CartProductSingleItem: View {
                   HStack(spacing: 20) {
                       QuantityButton(symbol: "+", action: {
                           // Increase quantity action
-                         // quantity+=1
+                          quantity+=1
+                          print("aassbaaa")
                       })
                       Text("\(quantity)")
                           .font(.title2)
                       QuantityButton(symbol: "-", action: {
                           // Decrease quantity action
-                         
+                          quantity-=1
                       })
                   }
               }

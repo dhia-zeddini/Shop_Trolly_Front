@@ -39,7 +39,7 @@ struct CartView: View {
                 Spacer()
             }
             .padding(.horizontal, 40)
-            .padding(.top, 40)
+            .padding(.top, 20)
             HStack {
                 Text("List (\(items.count))")
                     .foregroundColor(Color.themePrimary)
@@ -52,15 +52,15 @@ struct CartView: View {
         List{
             ForEach(items,id: \.self) { item in
                 CartProductSingleItem()
-                                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                                         Button(role: .destructive) {
-                                             itemToDelete = item
-                                             showDeletionAlert = true
-                                         } label: {
-                                             Image(systemName:"trash")
-                                         }
-                                     }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                    Button(role: .destructive) {
+                            itemToDelete = item
+                            showDeletionAlert = true
+                        } label: {
+                    Image(systemName:"trash")
+                }
             }
+         }
            // .onDelete(perform: deleteItems)
         }.listStyle(PlainListStyle())
             .alert("Are you sure you want to delete this item?", isPresented: $showDeletionAlert) {
@@ -101,7 +101,7 @@ struct CartView: View {
             .background(Color.themeSecondary)
             .padding(.horizontal, 40)
             //.padding(.top,20)
-            .padding(.bottom,50)
+            .padding(.bottom,20)
         }
     }
 

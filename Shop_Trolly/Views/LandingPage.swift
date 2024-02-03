@@ -25,7 +25,7 @@ struct LandingPage: View {
                            Text("Add")
                        }
                        if selectedTab == .chat{
-                           ChatView()
+                           ChatView(searchData: .constant(""))
                        }
                        if selectedTab == .profile{
                            ProfileView()
