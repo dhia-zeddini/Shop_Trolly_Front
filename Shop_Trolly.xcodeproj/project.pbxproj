@@ -32,6 +32,7 @@
 		7E136E372B6DA34E007B4704 /* ChatSingleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E362B6DA34E007B4704 /* ChatSingleItem.swift */; };
 		7E136E392B6DB244007B4704 /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E382B6DB244007B4704 /* ChatRoomView.swift */; };
 		7E136E3B2B6E7549007B4704 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E3A2B6E7549007B4704 /* CheckoutView.swift */; };
+		7E136E3D2B6E853E007B4704 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E136E3C2B6E853E007B4704 /* AddCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		7E136E362B6DA34E007B4704 /* ChatSingleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSingleItem.swift; sourceTree = "<group>"; };
 		7E136E382B6DB244007B4704 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		7E136E3A2B6E7549007B4704 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		7E136E3C2B6E853E007B4704 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				7E136E322B658400007B4704 /* CartView.swift */,
 				7E136E382B6DB244007B4704 /* ChatRoomView.swift */,
 				7E136E3A2B6E7549007B4704 /* CheckoutView.swift */,
+				7E136E3C2B6E853E007B4704 /* AddCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				7E013DFD2B5EFADB0026053A /* SignupView.swift in Sources */,
 				7E013DE92B5E99AF0026053A /* Persistence.swift in Sources */,
+				7E136E3D2B6E853E007B4704 /* AddCardView.swift in Sources */,
 				7E013DE22B5E99AD0026053A /* ContentView.swift in Sources */,
 				7E013E182B619A280026053A /* Colors.swift in Sources */,
 				7E013E0F2B604BA60026053A /* SideMenu.swift in Sources */,
